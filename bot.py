@@ -7,6 +7,8 @@ import os
 from fpdf import FPDF  # PDF генерация
 
 API_TOKEN = os.getenv("API_TOKEN")
+if not API_TOKEN:
+    raise ValueError("API_TOKEN не задан. Установите переменную окружения.")
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
