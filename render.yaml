@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: matrix-bot
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: python bot.py
+    envVars:
+      - key: API_TOKEN
+        value: YOUR_TELEGRAM_BOT_TOKEN_HERE
